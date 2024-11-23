@@ -160,7 +160,6 @@ def load_user(user_id):
     return db.get_or_404(User, user_id)
 
 
-# TODO: Use Werkzeug to hash the user's password when creating a new user.
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     my_form = RegistrationForm()
@@ -190,7 +189,6 @@ def register():
     return render_template("register.html", form=my_form)
 
 
-# TODO: Retrieve a user from the database based on their email. 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     form = Log_in_form()
@@ -227,7 +225,6 @@ def get_all_posts():
     return render_template("index.html", all_posts=posts)
 
 
-# TODO: Allow logged-in users to comment on posts
 @app.route("/post/<int:post_id>", methods=['GET', 'POST'])
 def show_post(post_id):
     requested_post = db.get_or_404(BlogPost, post_id)
