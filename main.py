@@ -14,7 +14,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegistrationForm, Log_in_form, CommentForm
 import os
 
-load_dotenv()  # Load variables from .env
 secret_key = os.getenv("SECRET_KEY")
 database_url = os.getenv("DATABASE_URL")
 
