@@ -106,7 +106,7 @@ with app.app_context():
 #     user = User(
 #         name="Harsh",
 #         email="harsh@icloud.com",
-#         password=generate_password_hash('harsh', method='pbkdf2:sha256', salt_length=8 )
+#         password=generate_password_hash('teksaz-pAqfib-sasbi3', method='pbkdf2:sha256', salt_length=8 )
 #     )
 #     db.session.add(user)
 #     db.session.commit()
