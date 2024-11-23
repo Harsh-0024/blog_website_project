@@ -12,7 +12,6 @@ from sqlalchemy import Integer, String, Text, ForeignKey
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegistrationForm, Log_in_form, CommentForm
-from dotenv import load_dotenv
 import os
 
 load_dotenv()  # Load variables from .env
