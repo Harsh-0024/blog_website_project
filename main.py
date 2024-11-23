@@ -236,7 +236,7 @@ def show_post(post_id):
                               post=requested_post)
         db.session.add(new_comment)
         db.session.commit()
-        return redirect(url_for("get_all_posts"))
+        return redirect(url_for("show_post", post_id=post_id))
     return render_template("post.html", post=requested_post, form=form)
 
 
