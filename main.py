@@ -18,6 +18,7 @@ secret_key = os.getenv("SECRET_KEY")
 database_url = os.getenv("DATABASE_URL")
 
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secret_key
 ckeditor = CKEditor(app)
