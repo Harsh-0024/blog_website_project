@@ -20,19 +20,6 @@ secret_key = os.getenv("SECRET_KEY")
 database_url = os.getenv("DATABASE_URL")
 
 
-'''
-Make sure the required packages are installed: 
-Open the Terminal in PyCharm (bottom left). 
-
-On Windows type:
-python -m pip install -r requirements.txt
-
-On MacOS type:
-pip3 install -r requirements.txt
-
-This will install the packages from the requirements.txt for this project.
-'''
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secret_key
 ckeditor = CKEditor(app)
@@ -101,30 +88,6 @@ class Comment(db.Model):
 
 with app.app_context():
     db.create_all()
-
-
-# with app.app_context():
-#     # Create a new user
-#     user = User(
-#         name="Harsh",
-#         email="harsh@icloud.com",
-#         password=generate_password_hash('teksaz-pAqfib-sasbi3', method='pbkdf2:sha256', salt_length=8 )
-#     )
-#     db.session.add(user)
-#     db.session.commit()
-#
-#
-# with app.app_context():
-#     post = BlogPost(
-#         title="Test Post",
-#         subtitle="This is a test subtitle",
-#         body="This is the test body of the post.",
-#         img_url="https://via.placeholder.com/150",
-#         date="November 22, 2024",
-#         author_id=1
-#     )
-#     db.session.add(post)
-#     db.session.commit()
 
 
 login_manager = LoginManager()
