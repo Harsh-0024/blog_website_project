@@ -88,30 +88,6 @@ with app.app_context():
     db.create_all()
 
 
-# with app.app_context():
-#     # Create a new user
-#     user = User(
-#         name="Harsh",
-#         email="harsh@icloud.com",
-#         password=generate_password_hash('teksaz-pAqfib-sasbi3', method='pbkdf2:sha256', salt_length=8 )
-#     )
-#     db.session.add(user)
-#     db.session.commit()
-#
-#
-# with app.app_context():
-#     post = BlogPost(
-#         title="Test Post",
-#         subtitle="This is a test subtitle",
-#         body="This is the test body of the post.",
-#         img_url="https://via.placeholder.com/150",
-#         date="November 22, 2024",
-#         author_id=1
-#     )
-#     db.session.add(post)
-#     db.session.commit()
-
-
 login_manager = LoginManager()
 login_manager.init_app(app)
 
