@@ -13,7 +13,9 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegistrationForm, Log_in_form, CommentForm
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 secret_key = os.getenv("SECRET_KEY")
 database_url = os.getenv("DATABASE_URL")
 
